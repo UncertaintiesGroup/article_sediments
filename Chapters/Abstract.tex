@@ -1,0 +1,10 @@
+\begin{abstract}
+\boldmath
+In this study, the modules TELEMAC-2D and SISYPHE of the Telemac-Mascaret Modelling System (TMS) have been used in combination with the OpenTURNS library (\url{www.openturns.org}) to perform an uncertainty quantification analysis of two-dimensional morphodynamic problems. OpenTURNS is a scientific library usable as a Python module dedicated to uncertainties treatment.
+
+A recently implemented API (Application Program Interface) allowed the communication between OpenTURNS and TELEMAC-2D/SISYPHE, and therefore the efficient implementation of Monte-Carlo like algorithms. In this problem, each uncertain sedimentological parameter, e.g. inlet mean diameter, Shields parameter, etc. has been associated to a statistical distribution, defined with OpenTURNS. A number of TELEMAC-2D/SISYPHE simulations has been proposed regarding the pre-defined random entries in order to guarantee the convergence of the Monte Carlo-like algorithms.
+
+This work allowed the implementation of uncertainty quantification analysis of computationally intensive morphodynamic simulations in the TMS. Thanks to the access to computer resources and optimized software, we were able to perform the uncertainty quantification analysis with a large set of variables, and therefore push the study further with the correlations effects analysis. 
+
+Keywords: Uncertainty quantification, Morphodynamic modelling, API, Monte-Carlo like algorithms, Sensitivity analysis
+\end{abstract}

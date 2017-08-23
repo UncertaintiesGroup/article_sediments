@@ -1,0 +1,29 @@
+\section{Introduction}
+\textcolor{red}{Partie intro sujet}
+
+Morphodynamic simulations have been increasingly used in the last few decades to model the bed evolution in rivers, coasts and estuaries. In this context, most of the equations are empirical and the parameters involved in the calculations are generally poorly defined in literature. The impact of the uncertainties related to those parameters remains unknown. 
+
+In order to quantify the impact of inputs uncertainties on simulations results, an uncertainty study is conducted. Ranking the variables in terms of influence allows to orientate the investigations when performing measurements or calibrating parameters for the simulations. In this study, the uncertainty quantification is applied to SISYPHE \cite{bib7}, a sediments transport module, coupled with TELEMAC2D \cite{bib12} for hydrodynamics, that integrate the TELEMAC-MASCARET modelling system.
+
+\textcolor{red}{Parler du calage effectué sur la partie hydrolique}
+
+blabla  + ADAO
+
+\textcolor{red}{Parler incertitudes}
+
+The Monte Carlo method is used to propagate the 
+uncertainties through SISYPHE. This approach requires random generation of several configurations of inputs, using their probability  distributions. Successive deterministic model simulations are then submitted to generate a set of responses that correspond to the set of inputs. 
+
+\textcolor{red}{Partie api}
+
+In order to have total control over the simulation's parameters and therefore conduct an efficient uncertainty study, an API (Application Program Interface) is developed for SISYPHE. This interface, when coupled with TELEMAC2D's available API, makes running hundreds of cases simultaneously possible through a cluster, taking total benefit from the available processors. Running an optimal number of cases guarantees the statistics convergence. 
+
+Finally, The pre-processing of uncertain data, as well as the post-processing of the results, are done using the OpenTURNS uncertainty library \cite{bib11}. 
+
+\textcolor{red}{A ajouter : description biblio sur les incertitudes en sédimento}
+
+blabla
+
+\textcolor{red}{Organisation papier}
+
+This paper is organized as follows: a description of the context and general goals, followed by the present study objectives are given. Section \ref{section:API} deals with the API's implementation and coupling with TELEMAC2D. Section \ref{section:uncertainty} discusses the uncertainty quantification steps and alternates theory and results for each of these. In this section, a sensitivity analysis followed by an uncertainty propagation are investigated. Correlations between variables are also studied using copulas and an ANCOVA (ANalysis of COVAriance) sensitivity analysis is applied. In the last section, conclusions and perspectives are drawn.

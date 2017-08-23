@@ -1,0 +1,168 @@
+\section{Application to morphodynamics processes}
+
+%Soulsby, RL and Whitehouse, RJS. Threshold of Sediment Motion in Coastal Environments [online]. In: Pacific Coasts and Ports '97: Proceedings of the 13th Australasian Coastal and Ocean Engineering Conference and the 6th Australasian Port and Harbour Conference; Volume 1. Christchurch, N.Z.: Centre for Advanced Engineering, University of Canterbury, 1997: [145]-[150]. Availability: <http://search.informit.com.au/documentSummary;dn=929741720399033;res=IELENG> ISBN: 0908993153. [cited 17 Aug 17]. 
+
+%and that is used in many sediment transport numerical models 
+
+%-----------------------------------------------------------------------------------------------
+\subsection{Governing equations}\label{subsec:goveq}
+In this work, morphodynamics processes are considered by solving the depth-averaged hydrodynamics and bed evolution equations. The hydrodynamics equations are the shallow water or Saint-Venant equations (SWE)~\cite{HYP:HYP611}, expressed as:
+\begin{equation}\label{eq:swe}
+\left\{
+	\begin{array}{l}
+	  \dfrac{\partial h}{\partial t} + \nabla \cdot (\mathbf uh) = 0 \\
+          \\
+          \dfrac{\partial \mathbf u}{\partial t} + \mathbf u \cdot \nabla\mathbf u + \nabla h = -g \nabla z_b - \dfrac{\boldsymbol \tau_b}{\rho h} + \dfrac{1}{h} \nabla \cdot (h \nu_t \nabla \mathbf u)
+	\end{array}
+\right.
+\end{equation}
+where $\mathbf u$ is the depth-averaged velocity vector with components ($u, v$) in the ($x, y$) horizontal directions; $t$ is the time; $h$ is the total water depth; $z_b$ is the elevation of the bottom topography above datum, measured along the vertical coordinate $z$, and aligned against the direction of the acceleration of gravity of magnitude $g$; and $\rho$ is the fluid density. To close the system~(\ref{eq:swe}), two additional relationships must be specified: ($i$) the shear stress vector $\boldsymbol \tau_b$ acting on the bed with components ($\tau_{b_x}, \tau_{b_y}$) in the ($x, y$) horizontal directions, and ($ii$) the depth-averaged turbulent eddy viscosity $\nu_t$. For the former, the
+classical squared function dependency on the depth-averaged velocity is used:
+\begin{equation}
+\boldsymbol \tau_b = \rho C_f |\mathbf u|\mathbf u, \quad\text{with}\,\, |\mathbf u|=(u^2+v^2)^{1/2},
+\end{equation}
+where the friction coefficient due to form drag plus skin friction $C_f = (u_*/|\mathbf u|)^2$ is specified with the relation:
+\begin{equation}
+C_f = g K^{-2} h^{-1/3},
+\end{equation}
+where $K$ represents the Manning-Strickler roughness coefficient. Above, $u_*$ denotes the shear velocity, defined by $u_*=\sqrt{|\boldsymbol \tau_b|/\rho}$, with $|\boldsymbol \tau_b|=(\tau_{b_x}^2+\tau_{b_y}^2)^{1/2}$. For the latter, a constant depth-averaged eddy viscosity $\nu_t$ is adopted for this work. Appropriate initial and boundary conditions are specified to the system~(\ref{eq:swe}). %and assumed to be equal to \textcolor{red}{COMPLETER XXXXX} m$^2$s$^{-1}$. 
+
+The bed evolution is accounted by solving a sediment mass balance or Exner equation. If only bed load transport is considered, the following equation arises~\cite{doi:10.1061/9780784408148}:
+\begin{equation}
+\label{eq:exner}
+(1-\lambda)\frac{\partial z_b}{\partial t} + \nabla\cdot \mathbf q_b = 0,
+\end{equation}
+with $\lambda$ the porosity and $\mathbf q_b$ the vector of volumetric transport rate per unit width without pores (m$^2/$s), with components $q_{b_x}, q_{b_y}$ respectively in the $x$ and $y$ directions, such as:
+\begin{align}
+\mathbf q_b = (q_{b_x}, q_{b_y}) = (q_b \cos\alpha, q_b \sin\alpha).
+\label{eq:bedloadtransportvector}
+\end{align}
+Above, $q_b$ is the bedload transport rate per unit width, computed as a function of the equilibrium sediment load closure (or sediment transport capacity) and $\alpha$ is the angle between the sediment transport vector and the downstream direction ($x-$axis).
+The dimensionless sediment transport rate $\Phi_b$ is expressed by:
+\begin{align}
+\Phi_b = \frac{q_b}{\sqrt{g(s-1)d^3}},
+\label{eq:Phis}
+\end{align}
+with $s=\rho_s/\rho$ the relative density ($-$); $\rho_s$ the sediment density (kg$/$m$^3$); $\rho$ the water density (kg$/$m$^3$); and $d$ the sand grain diameter, equal to the mean grain diameter $d_{50}$ for uniform sediment distribution (m).
+Bed load transport formulas are generally computed as function of the non-dimensional shear stress or Shields parameter $\theta$:
+\begin{align}
+\theta=\frac{\mu|\boldsymbol\tau_b|}{(\rho_s-\rho)gd}, 
+\label{eq:shieldsp}
+\end{align}
+with $\mu$ the correction factor for skin friction, computed as:
+\begin{equation}\label{eq:mu}
+\mu=\frac{C_f'}{C_f}
+\end{equation}
+where $C_f'$ is the friction coefficient due only to skin friction, which is computed as:
+\begin{equation}\label{eq:cfp}
+C_f'=2\left(\frac{\kappa}{\log(12h/k_s')}\right)^2,
+\end{equation}
+where $\kappa$ is the von K\'arm\'an coefficient ($=0.40$), the roughness height $k_s'=\alpha_{k_s}\times d_{50}$, the coefficient $\alpha_{k_s}$ is a calibration parameter.
+
+The angle $\alpha$ is the angle between the sediment transport direction and the $x-$axis direction will deviate from that of the shear stress by combined action of a transverse slope and secondary currents. In a Cartesian coordinate system, this effect is incorporated in the formula~\cite{doi:10.1080/00221688509499377}:
+\begin{equation}
+\displaystyle
+\tan\alpha = \frac{\sin\delta-\frac{1}{f(\theta)}\frac{\partial z_b}{\partial y}}{\cos\delta-\frac{1}{f(\theta)}\frac{\partial z_b}{\partial x}}.
+\end{equation}
+
+Above, the terms $\partial z_b/\partial x$ and $\partial z_b/\partial y$ represent respectively the transverse and longitudinal slopes, and $\delta$ is the angle between the sediment transport vector and the flow direction, that can be modified by spiral flow. As in this work spiral flows are not considered, then $\delta = \tan^{-1}\left({v}/{u}\right)$. The sediment shape function $f(\theta)$ is a function weighting the influence of the transverse bed slope, expressed as a function of the Shields parameter $\theta$. It can be computed according to Talmon \textit{et al.}~\cite{Talmon95} as $f(\theta) = {1}/{\beta_2}\sqrt{\theta}$, with $\beta_2$ an empirical coefficient.
+
+%The correction of the magnitude of the sediment transport proposed by Koch and Flokstra~\cite{KochFlokstra80} is based on the modification of the bed load transport rate by a factor that acts as a diffusion term in the bed evolution equation:
+%\begin{equation}
+%\begin{array}{ll} \displaystyle
+%q_b^* &= q_{b}\left[1 + \beta \left(\frac{\partial z_b}{\partial x} \cos\alpha + \frac{\partial z_b}{\partial y} \sin\alpha\right)\right],
+%\end{array}
+%\end{equation}
+%where $\beta$ is an empirical factor accounting for the streamwise bed slope effect.
+
+The correction of the magnitude of the sediment transport proposed by Soulsby~\cite{Soulsby97} is based on the modification of the critical Shields parameter and is therefore only valid for threshold bedload formulas:
+\begin{equation*}
+\frac{\theta_{cr}^*}{\theta_{cr}} = \frac{\cos\psi \sin\chi + 
+\sqrt{\cos^2\chi \tan^2\phi - \sin^2\psi \sin^2\chi}}{\tan
+\phi}
+\end{equation*}
+where $\theta_{cr}^*$ is the corrected critical Shields number for a sloping bed, $\theta_{cr}$ is the critical Shields number for a flat, horizontal bed, $\phi$ is the angle of repose of the sediment, $\chi$ is the bed slope angle with the horizontal, and $\psi$ is the angle between the flow and the bed slope directions.
+
+In this work, two different sediment transport formulas used in many morphodynamic models are considered: the Meyer-Peter and Muller (MPM) formula~\cite{meyer1948formulas, doi:10.1061/9780784408148}, which is a classical threshold formula that relates the bed load transport rate with the shear stress and the Grass formula~\cite{Grass81}, which is a continuous formula that relates the bed load to the flow velocities, based on the fact that some particle movement must occur at all nonzero time-mean velocities~\cite{doi:10.1061/(ASCE)0733-9429(2002)128:3(306), Hudson2003, FLD:FLD853, diaz2008sediment}. 
+
+The MPM formula is based on the grain mouvement threshold concept~\cite{meyer1948formulas, doi:10.1061/9780784408148} and has a wide application range $d=d_{50} = [0.4-29]$mm. The dimensionless sediment transport rate is given by:
+\begin{equation}\label{eq:MPM}
+\Phi_b=\left\{\begin{array}{ll}
+0 & \text{if}\,\theta<\theta_{cr}^*\\
+\alpha_{mpm}(\theta-\theta_{cr}^*)^{3/2} & \text{otherwise}
+\end{array}
+\right.
+\end{equation}
+with $\alpha_{mpm}$ a coefficient. A value of $\alpha_{mpm} = 8$ was proposed for the original MPM formula~\cite{meyer1948formulas, doi:10.1061/9780784408148}.% with $\theta_{cr}=0.0470$~\cite{GarciaBook2006}.
+
+The Grass formula is a simple power-law form of transport for non-cohesive sediment of uniform grain size~\cite{Grass81}: 
+\begin{equation}\label{eq:grass}
+\Phi_b = \frac{\alpha_{g}}{\sqrt{g(s-1)d^3}} |\mathbf u|^{\beta_{g}},%|\mathbf u|,
+\end{equation}
+where $\alpha_{g}$ is a non-negative constant and $\beta_{g}=3$.
+
+%\textcolor{red}{expliquer le choix de cette formule}
+
+%---------------------------------------------------------------------------
+%\subsection{Summary of the studied morphodynamic uncertain parameters}
+
+%-----------------------------------------------------------------------------------------------
+
+\subsection{Study cases : ANSWER}
+This case is a numerical reproduction of IRSTEA's laboratory experiment \cite{bib3}
+\\
+Description.
+\\
+\textcolor{red}{Décrire le cas d'étude ANSWER} \\
+- Lien avec la réalité (canaux de navigation?) \\
+- Cas Labo --> Renvoyer vers article IRSTEA (information à obtenir) \\
+- Observations qualitatives  \\
+- Phénomènes en jeu \\
+
+\textcolor{red}{Implémentation dans TELEMAC} \\
+Numerical case \\
+
+%-----------------------------------------------------------------------------------------------
+\subsection{Calage}
+\textcolor{red}{Calage partie hydro} \\
+- Théorie \\
+- ADAO \\
+- Résultats
+
+
+%-----------------------------------------------------------------------------------------------
+\subsection{Range of the uncertain parameters}
+From the governing equations introduced in Section~\ref{subsec:goveq}, the different parameters selected to perform the uncertainty analysis introduced in Section~\ref{} are presented in Table~\ref{tab:variables}. A uniform distribution is adopted based on the assumption that ... \textcolor{red}{CEDRIC, SOPHIA A COMPLETER AVEC DEFINITION RIGUREUSE}. As a guideline, the variability range of the values commonly found in the literature are presented in Table~\ref{tab:variables}.
+
+The variability mean sediment diameter is related to the source of uncertainty in measuring this quantity, which is estimated to the order of \textcolor{red}{A POSER LA QUESTION A CELINE}.
+
+The limits of the range of variation associated with $\alpha_{mpm}$ (Equation~\ref{eq:MPM}) are equivalent to those proposed by Hunziker and Jaeggi~\cite{doi:10.1061/(ASCE)0733-9429(2002)128:12(1060)} and Nielsen~\cite{nielsen1992coastal}. The variation of this coefficient can also be interpreted as if different sediment transport formulas are used as they are generally known to give results that can vary by more than one order of magnitude~\cite{WRCR:WRCR12272}.
+
+Although the coefficient $\alpha_g$ (Equation~\ref{eq:grass}) can take values between $0$ and $1$~\cite{diaz2008sediment}, most of the values found in the literature are in the range presented in Table~\ref{tab:variables}. A value of $\alpha_g$ close to zero means a weak interaction between the sediment and the fluid.
+
+\vspace{0.5cm}
+\begin{table}[!h]
+\centering
+\begin{tabular}{|L{1.25cm}|L{4.0cm}|C{0.75cm}|L{3cm}|L{2cm}|}
+  \hline
+  \hline
+  Variables & Definitions & Units & Range & References\\
+  \hline
+\hline $d_{50}$ & Sediment mean diameter & (m) & [1.0,2.0]$\times 10^{-3}$ & $-$\\
+\hline $\alpha_{mpm}$ & MPM's sediment transport coefficient & (-) & [5.0,12.0] & \cite{doi:10.1061/(ASCE)0733-9429(2002)128:12(1060),nielsen1992coastal}\\
+\hline $\alpha_g$ & Grass's sediment transport coefficient & (-) & [1.0$\times 10^{-6}$,0.00167] & \cite{MURILLO20108704,SIVIGLIA2013243}\\
+\hline $\lambda$ & Porosity & (-) & [0.25,0.40] & \cite{doi:10.1061/9780784408148}\\
+\hline $\alpha_{k_s}$ & Skin friction coefficient & (-) & [1.0,6.6] & \cite{Keulegan38,SED:SED51}\\
+\hline $\phi$ & Angle of repose of the sediments (slope effect on sediment transport direction) & ($\degree$) & [28.0,46.0] & \cite{Vulliet16}\\
+%\hline $\beta_2$ & Deviation parameter (slope effect on sediment transport magnitude) & (-) & [0.20;1.90] & \cite{doi:10.1061/(ASCE)HY.1943-7900.0001208,Smit16}\\
+\hline $\beta_2$ & Deviation parameter (slope effect on sediment transport magnitude) & (-) & [0.20,1.90] & \cite{Yossef2016river,talmon1995laboratory}\\
+\hline
+\hline
+\end{tabular}
+\caption{Uncertain parameters used in this work.}\label{tab:variables}
+\end{table}
+
+\textcolor{red}{Decrire les intervalles de tous ces paramètres : Recherche faite par Nicolas et Pablo}
+
+
+

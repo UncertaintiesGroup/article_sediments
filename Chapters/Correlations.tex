@@ -1,0 +1,77 @@
+%----------------------------------------------------------------------------------
+%-----------------------------------CORREL-----------------------------------------
+%----------------------------------------------------------------------------------
+\subsection{Correlations impact}
+Several physical relationships can exist between the considered uncertain parameters. These correlations between the variables can impact the uncertainty study, given that the parameters are no longer sampled independently. In order to model the correlations, copulas are introduced in section \ref{subsubsection:copulas}. For the sensitivity study, the ANOVA method can no longer be used, because of the independent parameters hypothesis it implies. A new method called ANCOVA (ANalysis of COVAriance) is introduced in section \ref{subsubsection:ANCOVA}. The uncertainty study is conducted with the correlations consideration on the channel's case. In fact, given that the only influencing parameter in the Bifurcation is the diameter, it has been concluded that the correlation study for this case would be useless.  
+
+%----------------------------------------------------------------------------------
+\subsubsection{Copulas for correlations modelling}
+\label{subsubsection:copulas}
+A copula is a function that defines a dependency structure between a set of variables \cite{bib5}. In fact, it links the multivariate probability density function of random set of variables $(X_1,...,X_V)$ to their univariate probability density functions. 
+
+A copula is a V-dimensional function $C$ defined on $[0,1]^V$ that verifies:
+\begin{itemize}
+\item $\forall u \in [0,1]^V$ $\forall i \in [|1:V|]$, if $u_i=0$ then $C(u)=0$
+\item $\forall i \in [|1:V|]$ and $u_i \in [0,1]$, $C(1,...,1,u_i,1,...,1)=u_i$
+\item $\forall u,v \in [0,1]^V$ verifying $\forall i \in [|1:V|] \quad u_i \leq v_i$ then $V_C([u,v]) \geq 0$
+\end{itemize}
+Where $V_C([u,v])$ is the C-volume of the space $[u_1,v_1]\otimes\hdots\otimes[u_V,v_V]$ defined as follows : 
+\begin{equation*}
+V_C([u,v]) = \Delta^{v_V}_{u_V}...\Delta^{v_1}_{u_1} C(\textbf{w})
+\end{equation*}
+\hspace{0.6cm}$\Delta^{v_i}_{u_i}$ being the $i^{\text{th}}$  finite differential:
+\begin{align*}
+\Delta^{v_i}_{u_i} C(\textbf{w})= C(w_1,...w_i,v_i,w_{i+1},...,w_V) \\
+-C(w_1,...w_i,u_i,w_{i+1},...,w_V)
+\end{align*}
+
+The Sklar theorem \cite{bib5} allows to define a relation between the multivariate PDF $f_X$ of the set $X=(X_1,...,X_V)$ and the univariate probability density functions $f_i$ of $X_i$ as follows :
+\begin{equation}
+f_X(x_1,...,x_V)=c(F_1(x_1),...,F_V(x_V))\times\prod^{V}_{i=1}f_{i}(x_i)
+\end{equation}
+Where $F_i$ are the univariate cumulative distribution functions of $X_i$ associated to the probability density functions $f_i$. On the other hand, $c$ is the probability density function of the copula $C$ defined as follows:
+\begin{equation}
+\forall \textbf{u} \in [0,1]^V \quad c(u_1,...,u_V) = \dfrac{\partial^V C}{\partial u_1...\partial u_V}(u_1,...,u_V)
+\end{equation}
+
+In this study, a classical Gaussian copula is used \cite{bib11}. It requires the calculation of a correlation Matrix using Spearman indices\cite{bib11} from the relationships between variables. The relationships modelled here are the following:
+\begin{itemize}
+\item The modified Komura porosity formula \cite{bib8}:
+\begin{equation}
+\lambda = 0.13 + \dfrac{0.21}{(d+0.002)^{0.21}}
+\end{equation}
+\item The following relationship between the deviation parameter and the sediments diameter \cite{bib9}:
+\begin{equation}
+\beta_2 = 9 \left(\dfrac{d}{H}\right)^{0.3}
+\end{equation}
+\end{itemize}
+
+
+%----------------------------------------------------------------------------------
+\subsubsection{Analysis of covariance}
+\label{subsubsection:ANCOVA}
+For dependent variables, it is possible to calculate the variance with the ANCOVA decomposition as follows:
+\begin{align*}
+Var[Y] =
+\sum_{u \subseteq \{1,...,V\}} [ Var[M_u(X_u)]\\
++ \sum_{v \subseteq \{1,...,V\}, v \cap u = \emptyset} Cov\left[M_v(X_v), M_u(X_u)\right] ] \addtocounter{equation}{1}\tag{\theequation}
+\end{align*}
+New sensitivity indices can be defined as:
+\begin{equation}
+\left\{
+	\begin{array}{lcr}
+S_i^U= \dfrac{Var\left[M_i(X_i)\right]}{Var[Y]} & & \\
+S_i^C= \dfrac{Cov\left[M_i(X_i),\sum_{v \subseteq \{1,...,V\}, v \cap \{i\} = \emptyset} M_v(X_v)\right]}{Var[Y]} & & \\
+S_i= S_i^U + S_i^C = \dfrac{Cov\left[M_i(X_i),Y\right]}{Var[Y]} & &
+	\end{array}
+\right.
+\end{equation}
+\\
+Where $S_i$ is the total influence of the variable $X_i$, $S_i^U$ the uncorrelated part of influence and $S_i^C$ the correlated part.
+
+ANCOVA indices can be negative because of the covariance term. In order to interpret the signification of negative indices, their absolute values are compared. In fact, if $|S_i^C|$ has a high value, this means that $S_i^U$ is close to $S_i$, which signifies that correlations of the variable $X_i$ have weak influence on the result. Inversely, if it has a high value, this means that correlations of $X_i$ have great impact on the simulation's result.
+
+Lastly, as show in section \ref{subsubsection:ANOVA}, the terms $M_i(X_i)$ can be estimated via the polynomial chaos expansion. However, in order to guarantee the orthogonality of the polynomial chaos basis, it is necessary to estimate the coefficients of the expansion using uncorrelated entries $X$. The $M_i$ terms are estimated afterwards using the correlated values of the entries. 
+
+%----------------------------------------------------------------------------------
+
