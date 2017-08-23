@@ -1,0 +1,120 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/dev/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: article.aux
+A level-1 auxiliary file: Chapters/Abstract.aux
+A level-1 auxiliary file: Chapters/Intro.aux
+A level-1 auxiliary file: Chapters/Context.aux
+A level-1 auxiliary file: Chapters/API.aux
+A level-1 auxiliary file: Chapters/Quantification.aux
+A level-1 auxiliary file: Chapters/Sensitivity.aux
+A level-1 auxiliary file: Chapters/Result_SENSITIVITY.aux
+A level-1 auxiliary file: Chapters/Uncertainty.aux
+A level-1 auxiliary file: Chapters/Result_UNCERTAINTY.aux
+A level-1 auxiliary file: Chapters/Correlations.aux
+A level-1 auxiliary file: Chapters/Result_CORRELATION.aux
+A level-1 auxiliary file: Chapters/Case.aux
+A level-1 auxiliary file: Chapters/Conclusion.aux
+The style file: Biblio/IEEEtran.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: Biblio/IEEEabrv.bib
+Database file #2: Biblio/publi_biblio.bib
+I was expecting a `,' or a `}'---line 194 of file Biblio/publi_biblio.bib
+ : 
+ : URL = {http://ascelibrary.org/doi/abs/10.1061/%28ASCE%290733-9429%282002%29128%3A3%28306%29},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 281 of file Biblio/publi_biblio.bib
+ : 
+ : URL = {http://ascelibrary.org/doi/abs/10.1061/%28ASCE%29HY.1943-7900.0001208},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 305 of file Biblio/publi_biblio.bib
+ : 
+ : URL = {http://ascelibrary.org/doi/abs/10.1061/%28ASCE%290733-9429%282002%29128%3A12%281060%29},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+-- IEEEtranS.bst version 1.13 (2008/09/30) by Michael Shell.
+-- http://www.michaelshell.org/tex/ieeetran/bibtex/
+-- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+** Sorting version - not for normal IEEE work.
+Too many commas in name 1 of "Vulliet, L., Laloui, L., Zhao, J." for entry Vulliet16
+while executing---line 2597 of file Biblio/IEEEtran.bst
+Too many commas in name 1 of "Vulliet, L., Laloui, L., Zhao, J." for entry Vulliet16
+while executing---line 2597 of file Biblio/IEEEtran.bst
+Too many commas in name 1 of "Vulliet, L., Laloui, L., Zhao, J." for entry Vulliet16
+while executing---line 2597 of file Biblio/IEEEtran.bst
+Too many commas in name 1 of "Yossef, M. F., Becker, A., & De\'ak, G." for entry Yossef2016river
+while executing---line 2597 of file Biblio/IEEEtran.bst
+Too many commas in name 1 of "Yossef, M. F., Becker, A., & De\'ak, G." for entry Yossef2016river
+while executing---line 2597 of file Biblio/IEEEtran.bst
+Too many commas in name 1 of "Yossef, M. F., Becker, A., & De\'ak, G." for entry Yossef2016river
+while executing---line 2597 of file Biblio/IEEEtran.bst
+Warning--empty journal in bib11
+Warning--empty journal in bib4
+Warning--empty journal in bib5
+Warning--empty journal in bib16
+Warning--empty journal in bib10
+Warning--empty journal in bib17
+Warning--empty journal in bib9
+Warning--empty journal in bib12
+Warning--empty journal in bib7
+Too many commas in name 1 of "Vulliet, L., Laloui, L., Zhao, J." for entry Vulliet16
+while executing---line 2609 of file Biblio/IEEEtran.bst
+Too many commas in name 1 of "Vulliet, L., Laloui, L., Zhao, J." for entry Vulliet16
+while executing---line 2609 of file Biblio/IEEEtran.bst
+Too many commas in name 1 of "Vulliet, L., Laloui, L., Zhao, J." for entry Vulliet16
+while executing---line 2609 of file Biblio/IEEEtran.bst
+Too many commas in name 1 of "Yossef, M. F., Becker, A., & De\'ak, G." for entry Yossef2016river
+while executing---line 2609 of file Biblio/IEEEtran.bst
+Too many commas in name 1 of "Yossef, M. F., Becker, A., & De\'ak, G." for entry Yossef2016river
+while executing---line 2609 of file Biblio/IEEEtran.bst
+Too many commas in name 1 of "Yossef, M. F., Becker, A., & De\'ak, G." for entry Yossef2016river
+while executing---line 2609 of file Biblio/IEEEtran.bst
+
+Done.
+You've used 35 entries,
+            4498 wiz_defined-function locations,
+            1513 strings with 21932 characters,
+and the built_in function-call counts, 24144 in all, are:
+= -- 2268
+> -- 536
+< -- 148
++ -- 268
+- -- 125
+* -- 1175
+:= -- 4022
+add.period$ -- 71
+call.type$ -- 35
+change.case$ -- 164
+chr.to.int$ -- 321
+cite$ -- 44
+duplicate$ -- 1611
+empty$ -- 1769
+format.name$ -- 141
+if$ -- 5290
+int.to.chr$ -- 0
+int.to.str$ -- 35
+missing$ -- 255
+newline$ -- 147
+num.names$ -- 72
+pop$ -- 630
+preamble$ -- 2
+purify$ -- 131
+quote$ -- 2
+skip$ -- 1841
+stack$ -- 0
+substring$ -- 960
+swap$ -- 1154
+text.length$ -- 41
+text.prefix$ -- 0
+top$ -- 6
+type$ -- 355
+warning$ -- 9
+while$ -- 118
+width$ -- 37
+write$ -- 361
+(There were 15 error messages)

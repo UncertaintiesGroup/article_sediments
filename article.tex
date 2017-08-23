@@ -1,0 +1,120 @@
+\documentclass{article}
+
+
+% Header
+\usepackage{fancyhdr}
+\pagestyle{fancyplain}
+\fancyhf{}
+\lhead{ \fancyplain{}{Journal Name} }
+\rhead{ \fancyplain{}{place, date} }
+%My adds%%%%%%%%%%%%%%%%
+\DeclareRobustCommand*{\IEEEauthorrefmark}[1]{%
+  \raisebox{0pt}[0pt][0pt]{\textsuperscript{\footnotesize\ensuremath{#1}}}}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc} %Not used
+\usepackage{url} %for urls
+\usepackage{hyperref} %To hyperling
+\usepackage{amsfonts} %For \mathbb
+\usepackage{tabularx} %For tabulars
+\usepackage{array,multirow,makecell}
+\usepackage{textcomp}
+\usepackage{gensymb}
+%\usepackage{array}
+\setcellgapes{1pt}
+\makegapedcells
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash }b{#1}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash }b{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash }b{#1}}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+% *** CITATION PACKAGES ***
+\usepackage{cite}
+
+\usepackage[pdftex]{graphicx}
+\usepackage{color}
+
+% *** MATH PACKAGES ***
+\usepackage[cmex10]{amsmath}
+
+% *** ALIGNMENT PACKAGES ***
+%
+\usepackage{array}
+
+% *** SUBFIGURE PACKAGES ***
+%\usepackage[caption=false]{caption}
+\usepackage[font=footnotesize]{subfig}
+
+% *** FLOAT PACKAGES ***
+\usepackage{fixltx2e}
+
+% correct bad hyphenation here
+\hyphenation{op-tical net-works semi-conduc-tor}
+
+
+%\usepackage{setspace}
+%\doublespacing
+%\usepackage{lineno}
+%\linenumbers
+
+\begin{document}
+
+%Authors
+\title{Uncertainty quantification in 2D morphodynamic models}
+\author{R. S. Mouradi  \\
+        Saint-Venant Laboratory for Hydraulics\\
+	Email: \href{mailto:remsophia.mouradi@gmail.com}{remsophia.mouradi@gmail.com} \\
+	\and 
+	C. Goeury \\
+	EDF R\&D National Laboratory for Hydraulics and Environment (LNHE)\\
+	\and
+        Y. Audoin \\
+	EDF R\&D National Laboratory for Hydraulics and Environment (LNHE)\\
+        \and
+        N. Claude\\
+	EDF R\&D National Laboratory for Hydraulics and Environment (LNHE)\\
+        \and
+	P. Tassi \\
+        EDF R\&D National Laboratory for Hydraulics and Environment (LNHE)\\
+        Saint-Venant Laboratory for Hydraulics\\  
+        \and
+        K. El kadi Abderrezzak\\
+	EDF R\&D National Laboratory for Hydraulics and Environment (LNHE)\\
+	Saint-Venant Laboratory for Hydraulics\\   
+	}
+\date{\today}
+\maketitle
+
+%Chapters
+%===========================================================================
+\include{Chapters/Abstract}
+%===========================================================================
+\include{Chapters/Intro}
+%===========================================================================
+\include{Chapters/Context}
+%===========================================================================
+\include{Chapters/API}
+%===========================================================================
+\include{Chapters/Quantification}
+%------------------------------------
+\include{Chapters/Sensitivity}
+\include{Chapters/Result_SENSITIVITY}
+%------------------------------------
+\include{Chapters/Uncertainty}
+\include{Chapters/Result_UNCERTAINTY}
+%------------------------------------
+\include{Chapters/Correlations}
+\include{Chapters/Result_CORRELATION}
+%===========================================================================
+\include{Chapters/Case}
+%===========================================================================
+\include{Chapters/Conclusion}
+%===========================================================================
+
+%References
+\newpage
+\bibliographystyle{Biblio/IEEEtran}
+\bibliography{Biblio/IEEEabrv,Biblio/publi_biblio}
+
+% that's all folks
+\end{document}
+
+
