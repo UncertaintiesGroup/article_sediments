@@ -1,0 +1,348 @@
+%@preamble{ " \newcommand{\noop}[1]{} " } % a do-nothing command that serves a purpose
+
+@Article{bib1,
+	author		= {M. KADIRI-OTTMANI},
+	year		= {2002},
+	title		= {{Traitement statistique d'un échantillon}},
+	journal		= {Technical report of CEA}
+}
+@Article{bib2,
+	author		= {J. HERVOUET},
+	year		= {2007},
+	title		= {{Hydrodynamics of free surface flows, Wileys}}
+}
+@Article{bib3,
+	author		= {W. WU},
+	year		= {2004},
+	title		= {{Depth-averaged two-dimensional numerical modeling of unsteady flow and uniform sediment transport in open channels}},
+	journal		= {Journal of Hydraylic Engineering}
+}
+@Article{bib4,
+	author		= {Y. CANIOU},
+	year		= {2012},
+	title		= {{Global sensitivity analysis for nested and multiscale modelling. PhD thesis. Blaise Pascal University Clermont II France}}
+}
+@Article{bib5,
+	author		= {G. CHASTAING},
+	year		= {2010},
+	title		= {{Indices de Sobol généralisés pour variables dépendantes}}
+}
+@Article{bib6,
+	author		= {P.L. WIBERG and J.D. SMITH},
+	year		= {1989},
+	title		= {{Model for calculating bed load transport of sediment}},
+	journal		= {Journal of Hydraylic Engineering}
+}
+@Article{bib7,
+	author		= {P. TASSI and C. VILLARET},
+	year		= {2014},
+	title		= {{SISYPHE USER'S MANUAL - Release 6.3 - USER MANUAL}}
+}
+@Article{bib8,
+	author		= {W. WU and S.Y. WANG},
+	year		= {2006},
+	title		= {{Formulas for sediment porosity and settling velocity}},
+	journal		= {Journal of Hydraylic Engineering}
+}
+@Article{bib9,
+	author		= {{M. VAN ORMONDT, C. BRIERE, D.J.R. WALSTRA, L.C. VAN RIJN and A.M. TALMON}},
+	year		= {2006},
+	title		= {{FThe effects of bed slope and wave skewness on sediment transport and morphology}}
+}
+@Article{bib10,
+	author		= {{H. DELOUIS and P. CORDE}},
+	year		= {2007},
+	title		= {{Cours Fortran 95 - IDRIS}}
+}
+@Article{bib11,
+	author		= {Airbus-EDF-IMACS-Phimeca},
+	year		= {2016},
+	title		= {{Reference Guide - OpenTurns 1.7}}
+}
+@Article{bib12,
+	author		= {{R. ATA, C. GOEURY, P. LANG, J. DESOMBRE, J.M. HERVOUET}},
+	year		= {2014},
+	title		= {{TELEMAC MODELLING SYSTEM - Release 7.0 - USER MANUAL}}
+}
+
+@Article{bib14,
+	author		= {E. MEYER-PETER and R. MÜLLER},
+	year		= {2004},
+	title		= {{Formulas for Bed-Load Transport}}
+}
+@Article{bib15,
+	author		= {{P. TASSI, M.I. MORELL and C.A VIONNET}},
+	year		= {2014},
+	title		= {{Flow pattern at a river diffluence at the alluvia system of the Paraná River}},
+	journal		= {Journal of Applied Water Engineering and Research}
+}
+@Article{bib16,
+	author		= {C. GOEURY and N. GOUTAL},
+	year		= {2014},
+	title		= {{Analyse de sensibilité et propagation d'incertitude dans les modèles numériques : Application à l'hydraulique}}
+}
+@Article{bib17,
+	author		= {B. IOSS},
+	year		= {2010},
+	title		= {{Revue sur l'analyse de sensibilité globale de modèles numériques}}
+}
+@Article{bib18,
+	author		= {{A. PASANISI, M. COUPLET and A.H DUTFOY LEBRUN}},
+	year		= {2013},
+	title		= {{Guide méthodologique pour le Traitement des Incertitudes}},
+	journal		= {{Note EDF-MRI, reference H-T57-2013-02207-FR}}
+}
+@Article{bib19,
+	author		= {{B. SUDRET}},
+	year		= {2007},
+	title		= {{Uncertainty propagation and sensitivity analysis in mechanical models. Contributions to structural reliability and stochastic spectral methods}},
+	journal		= {{Accreditation to supervise research report}}
+}
+
+@article {HYP:HYP611,
+author = {Lane, Stuart N.},
+title = {Hydraulic modelling in hydrology and geomorphology: a review of high resolution approaches},
+journal = {Hydrological Processes},
+volume = {12},
+number = {8},
+publisher = {John Wiley & Sons, Ltd},
+issn = {1099-1085},
+url = {http://dx.doi.org/10.1002/(SICI)1099-1085(19980630)12:8<1131::AID-HYP611>3.0.CO;2-K},
+doi = {10.1002/(SICI)1099-1085(19980630)12:8<1131::AID-HYP611>3.0.CO;2-K},
+pages = {1131--1150},
+year = {1998},
+}
+
+@book{doi:10.1061/9780784408148,
+author = {Marcelo Garcia},
+title = {Sedimentation Engineering},
+publisher = {American Society of Civil Engineers},
+year = {2008},
+doi = {10.1061/9780784408148},
+edition   = {},
+URL = {http://ascelibrary.org/doi/abs/10.1061/9780784408148},
+eprint = {http://ascelibrary.org/doi/pdf/10.1061/9780784408148}
+}
+
+
+@article{doi:10.1080/00221688509499377,
+author = { N.   Struiksma  and  K. W.   Olesen  and  C.   Flokstra  and  Dr.   H. J.   De Vriend },
+title = {Bed deformation in curved alluvial channels},
+journal = {Journal of Hydraulic Research},
+volume = {23},
+number = {1},
+pages = {57-79},
+year = {1985},
+doi = {10.1080/00221688509499377},
+URL = { 
+        http://dx.doi.org/10.1080/00221688509499377
+},
+}
+
+@Article{Talmon95,
+	author		= {Talmon A.M. and Struiksma N. and van Mierlo M.C.L.M},
+	year		= {1995},
+	title		= {Laboratory measurements of the direction of sediment transport on transverse alluvial-bed slopes.},
+	journal		= {J. of Hydr. Res.},
+	volume		= {33(4)},
+	pages		= {495--517},
+}
+
+@Book{Soulsby97,
+  author = 	 {Soulsby R.},
+  title = 	 {Dynamics of marine sands},
+  publisher = 	 {H.R. Wallingford},
+  year = 	 {1997}
+}
+
+
+
+@TECHREPORT{Grass81,
+  AUTHOR =        {A. Grass},
+  TITLE =         {Sediment transport by waves and currents},
+  NUMBER =        {FL29},
+  INSTITUTION =   {SERC Cent. Mar. Tech.},
+  ADDRESS =       {London},
+  YEAR  =         {1981},
+}
+
+@Article{Hudson2003,
+author="Hudson, Justin
+and Sweby, Peter K.",
+title="Formulations for Numerically Approximating Hyperbolic Systems Governing Sediment Transport",
+journal="Journal of Scientific Computing",
+year="2003",
+month="Dec",
+day="01",
+volume="19",
+number="1",
+pages="225--252",
+issn="1573-7691",
+doi="10.1023/A:1025304008907",
+url="https://doi.org/10.1023/A:1025304008907"
+}
+
+@article{doi:10.1061/(ASCE)0733-9429(2002)128:3(306),
+author = {Zhixian Cao  and Rodney Day  and Shinji Egashira },
+title = {Coupled and Decoupled Numerical Modeling of Flow and Morphological Evolution in Alluvial Rivers},
+journal = {Journal of Hydraulic Engineering},
+volume = {128},
+number = {3},
+pages = {306-321},
+year = {2002},
+doi = {10.1061/(ASCE)0733-9429(2002)128:3(306)}
+URL = {http://ascelibrary.org/doi/abs/10.1061/%28ASCE%290733-9429%282002%29128%3A3%28306%29},
+}
+
+@article {FLD:FLD853,
+author = {Hudson, Justin and Sweby, Peter K.},
+title = {A high-resolution scheme for the equations governing 2D bed-load sediment transport},
+journal = {International Journal for Numerical Methods in Fluids},
+volume = {47},
+number = {10-11},
+publisher = {John Wiley & Sons, Ltd.},
+issn = {1097-0363},
+url = {http://dx.doi.org/10.1002/fld.853},
+doi = {10.1002/fld.853},
+pages = {1085--1091},
+year = {2005},
+}
+
+@article{MURILLO20108704,
+title = "An Exner-based coupled model for two-dimensional transient flow over erodible bed",
+journal = "Journal of Computational Physics",
+volume = "229",
+number = "23",
+pages = "8704 - 8732",
+year = "2010",
+note = "",
+issn = "0021-9991",
+doi = "http://dx.doi.org/10.1016/j.jcp.2010.08.006",
+url = "http://www.sciencedirect.com/science/article/pii/S0021999110004432",
+author = "J. Murillo and P. García-Navarro",
+}
+
+@article{SIVIGLIA2013243,
+title = "Numerical modelling of two-dimensional morphodynamics with applications to river bars and bifurcations",
+journal = "Advances in Water Resources",
+volume = "52",
+number = "",
+pages = "243 - 260",
+year = "2013",
+note = "",
+issn = "0309-1708",
+doi = "http://dx.doi.org/10.1016/j.advwatres.2012.11.010",
+url = "http://www.sciencedirect.com/science/article/pii/S0309170812002928",
+author = "Annunziato Siviglia and Guglielmo Stecca and Davide Vanzo and Guido Zolezzi and Eleuterio F. Toro and Marco Tubino",
+}
+
+@TECHREPORT{Keulegan38,
+  AUTHOR =        {G. H. Keulegan},
+  TITLE =         {Laws of turbulent flow in open channels},
+  NUMBER =        {FL29},
+  INSTITUTION =   {National Bureau of Standards},
+  ADDRESS =       {London},
+  VOLUME = {21},
+  PAGES = {707-741},
+  YEAR  =         {US},
+}
+
+@article {SED:SED51,
+author = {HAMMOND, F. D. C. and HEATHERSHAW, A. D. and LANGHORNE, D. N.},
+title = {A comparison between Shields' threshold criterion and the movement of loosely packed gravel in a tidal channel},
+journal = {Sedimentology},
+volume = {31},
+number = {1},
+publisher = {Blackwell Publishing Ltd},
+issn = {1365-3091},
+url = {http://dx.doi.org/10.1111/j.1365-3091.1984.tb00722.x},
+doi = {10.1111/j.1365-3091.1984.tb00722.x},
+pages = {51--62},
+year = {1984},
+}
+
+@Book{Vulliet16,
+  author = 	 {Vulliet, L., Laloui, L., Zhao, J.},
+  title = 	 {M\'ecanique des sols et des roches (TGC volume 18): avec \'ecoulements souterrains et transferts de chaleur},
+  volume = {TGC volume 18},
+  publisher = 	 {PPUR Presses polytechniques},
+  year = 	 {2016}
+}
+
+@article{doi:10.1061/(ASCE)HY.1943-7900.0001208,
+author = {Alejandro Mendoza  and Jorge D. Abad  and Eddy J. Langendoen  and Dongchen Wang  and Pablo Tassi  and Kamal El Kadi Abderrezzak },
+title = {Effect of Sediment Transport Boundary Conditions on the Numerical Modeling of Bed Morphodynamics},
+journal = {Journal of Hydraulic Engineering},
+volume = {143},
+number = {4},
+pages = {04016099},
+year = {2017},
+doi = {10.1061/(ASCE)HY.1943-7900.0001208}
+URL = {http://ascelibrary.org/doi/abs/10.1061/%28ASCE%29HY.1943-7900.0001208},
+}
+
+De Smit, J.C. (2016). Sediment transport on transversely sloping beds in a carousel. MSc. Thesis. Utrecht University, 51pp. (dis que classiquement beta_2 est compris entre 0.5 et 3)
+
+@MastersThesis{Smit16,
+    author     =     {De Smit, J.C.},
+    title     =     {{Sediment transport on transversely sloping beds in a carousel.}},
+    school     =     {Utrecht University},
+    address     =     {the Netherlands},
+    year     =     {2016},
+    note         = {51pp}
+    }
+
+@article{doi:10.1061/(ASCE)0733-9429(2002)128:12(1060),
+author = {Roni P. Hunziker  and Martin N. R. Jaeggi },
+title = {Grain Sorting Processes},
+journal = {Journal of Hydraulic Engineering},
+volume = {128},
+number = {12},
+pages = {1060-1068},
+year = {2002},
+doi = {10.1061/(ASCE)0733-9429(2002)128:12(1060)}
+
+URL = {http://ascelibrary.org/doi/abs/10.1061/%28ASCE%290733-9429%282002%29128%3A12%281060%29},
+}
+
+@book{nielsen1992coastal,
+  title={Coastal bottom boundary layers and sediment transport},
+  author={Nielsen, Peter},
+  volume={4},
+  year={1992},
+  publisher={World Scientific Publishing Co Inc}
+}
+
+@article {WRCR:WRCR12272,
+author = {Recking, A.},
+title = {A comparison between flume and field bed load transport data and consequences for surface-based bed load transport prediction},
+journal = {Water Resources Research},
+volume = {46},
+number = {3},
+issn = {1944-7973},
+url = {http://dx.doi.org/10.1029/2009WR008007},
+doi = {10.1029/2009WR008007},
+pages = {n/a--n/a},
+keywords = {Sediment transport, Ungaged basins, Geomorphology: fluvial, bed load transport, gravel bed river, modeling},
+year = {2010},
+note = {W03518},
+}
+
+@inproceedings{meyer1948formulas,
+  title={Formulas for bed-load transport},
+  author={Meyer-Peter, Eugen and M{\"u}ller, R},
+  booktitle={IAHSR 2nd meeting, Stockholm, appendix 2},
+  year={1948},
+  organization={IAHR}
+}
+
+@article{diaz2008sediment,
+  title={Sediment transport models in shallow water equations and numerical approach by high order finite volume methods},
+  author={D{\'\i}az, MJ Castro and Fern{\'a}ndez-Nieto, Enrique D and Ferreiro, AM},
+  journal={Computers \& Fluids},
+  volume={37},
+  number={3},
+  pages={299--316},
+  year={2008},
+  publisher={Elsevier}
+}
